@@ -38,7 +38,7 @@ class WebsiteAdmissionForm(http.Controller):
         course_list = [{'id': course.id, 'name': course.name, 'check_max_count': len(op_admission_register)} for course in op_course]
         return json.dumps(course_list)
 
-    @http.route('/admission/form/submit', type='http', auth="public", methods=['POST'], website=True, sitemap=True)
+    @http.route('/admission/form/submit', type='http', auth="public", methods=['GET'], website=True, sitemap=True)
     def admission_form_submit(self, **kw):
         first_name = kw.get('first_name')
         middle_name = kw.get('middle_name')
