@@ -24,5 +24,8 @@ class OPAdmissionInherit(models.Model):
     
     mother_name = fields.Char(
         'Mother Name')
+
+    salary = fields.Char(
+        'salary')   
     # branch_id = fields.Many2one('res.company', string="Branch")
     # academic_history_ids = fields.One2many('op.academic.history', 'op_admission_id')
